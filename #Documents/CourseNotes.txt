@@ -1,0 +1,23 @@
+Create a simple maven project using IntelliJ Idea
+Create the remote repository on Github
+Open the local project in IDE's terminal to configure local git repository
+Perform "git init"
+Perform "git remote add origin <URL of the github project>"
+On GitHub, go to settings/developer settings/personal access tokens to generate a token
+This token will act as password for authorizing remote push requests
+Perform "git pull origin master" to fetch README.md files created on GitHub remote repo
+Perform "git checkout -b <new-branch-name>" this creates a local branch
+Configure the project to be a Spring Project by adding maven dependency to the POM.xml file
+"""
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.3.14</version>
+        </dependency>
+
+    </dependencies>
+"""
+Refresh the maven project, so that all the spring dependencies are downloaded from remote to local project
+Add a .gitignore file to exclude folder target that contains Java build artifacts.
